@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coworking.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Coworking.Api.Controllers.WeatherForecastController.Get">
+            <summary>
+            Documentar que hace el servicio
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coworking.Api.Controllers.WeatherForecastController.MetodoPost(Coworking.Api.Request.RequestEjemplo)">
+            <summary>
+            Post the request
+            </summary>
+            <param name="requestEjemplo">Clase que contiene los valores xxxx</param>
+            <returns>Los datos del usuario</returns>
+        </member>
+    </members>
+</doc>

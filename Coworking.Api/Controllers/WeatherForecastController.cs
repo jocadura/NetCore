@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Coworking.Api.Request;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,10 @@ namespace Coworking.Api.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Documentar que hace el servicio
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -34,6 +39,17 @@ namespace Coworking.Api.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        /// <summary>
+        /// Post the request
+        /// </summary>
+        /// <param name="requestEjemplo">Clase que contiene los valores xxxx</param>
+        /// <returns>Los datos del usuario</returns>
+        [HttpPost]
+        public String MetodoPost([FromBody] RequestEjemplo requestEjemplo)
+        {
+
+            return "Recibido objeto del usuario" + requestEjemplo.Name + "con email " + requestEjemplo.DatosContacto.Email;
         }
     }
 }
